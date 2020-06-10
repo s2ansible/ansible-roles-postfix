@@ -1,0 +1,17 @@
+---
+- name: install the latest version of Postfix
+  yum:
+    name: postfix
+    state: latest
+
+- name: remove the sendmail package
+  yum:
+    name: sendmail
+    state: absent
+
+- name: start postfix
+  systemd:
+    name: postfix.service
+    state: started
+    enabled: yes
+  become: yes
