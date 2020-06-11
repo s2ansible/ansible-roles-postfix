@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: postfix
   author: beaverjr
   description: install postfix
   company: S2 Co.,Ltd.
